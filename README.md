@@ -4,7 +4,7 @@ The Code i'm writting durring the Advent of Code 2025
 
 - [x] [Day 2](./day1/)
 - [x] [Day 1](./day2/)
-- [ ] Day 3
+- [x] [Day 3](./day3/)
 - [ ] Day 4
 - [ ] Day 5
 - [ ] Day 6
