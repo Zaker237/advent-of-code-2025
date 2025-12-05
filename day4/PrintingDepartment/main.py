@@ -72,9 +72,60 @@ def solve_part1(file_path: Path) -> list[int]:
     return results
 
 
+def solve_part2(file_path: Path) -> list[int]:
+    papers = read_file_lines(file_path)
+    if not papers:
+        raise Exception(f"the file {file_path.stem} do not contains papers")
+    # papers = [
+    #     "..@@.@@@@.",
+    #     "@@@.@.@.@@",
+    #     "@@@@@.@.@@",
+    #     "@.@@@@..@.",
+    #     "@@.@@@@.@@",
+    #     ".@@@@@@@.@",
+    #     ".@.@.@.@@@",
+    #     "@.@@@.@@@@",
+    #     ".@@@@@@@@.",
+    #     "@.@.@@@.@.",
+    # ]
+
+    datas = [[a for a in item] for item in papers]
+
+    results = []
+    is_roll_removed = True
+    removed_rolls = None
+    while is_roll_removed:
+        removable = []
+        print(
+            f"Remove {removed_rolls} rolls of paper:"
+            if removed_rolls
+            else "Initial state:"
+        )
+        # print("\n".join([str(elem) for elem in datas]))
+        for i in range(len(datas)):
+            for j in range(len(datas[i])):
+                rolls = handel_single_position(datas, i, j)
+                rolls_filtered = [val for val in rolls if val and val == "@"]
+                if datas[i][j] == "@" and len(rolls_filtered) < 4:
+                    results.append((i, j))
+                    removable.append((i, j))
+        if len(removable) > 0:
+            removed_rolls = len(removable)
+            for a, b in removable:
+                datas[a][b] = "."
+            removable = []
+        else:
+            is_roll_removed = False
+    return results
+
+
 def main():
     rolls = solve_part1(INPUTS_FILE_PATH)
-    print(f"Ihe total output joltage is: \n{len(rolls)}")
+    print(f"Ihe total of rolls of paper that can be removed is: \n{len(rolls)}")
+    rolls_2 = solve_part2(INPUTS_FILE_PATH)
+    print(
+        f"Ihe total output rolls of paper that can be removed with method2 is: {len(rolls_2)}"
+    )
 
 
 if __name__ == "__main__":
