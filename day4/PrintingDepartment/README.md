@@ -1,4 +1,4 @@
-# Day 1: Day 2: Lobby
+# Day 4: Lobby
 
 ## Part One
 
