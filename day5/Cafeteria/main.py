@@ -57,7 +57,7 @@ def solve_part1(file_path: Path) -> list[int]:
 
 def main():
     fresh_ingredients_1 = solve_part1(INPUTS_FILE_PATH)
-    print(f"Ihe total output joltage is: {len(fresh_ingredients_1)}")
+    print(f"Ihe total fresh_ingredients is: {len(fresh_ingredients_1)}")
 
 
 if __name__ == "__main__":
