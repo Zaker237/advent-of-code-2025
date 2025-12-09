@@ -100,9 +100,9 @@ def solve_part2(file_path: Path) -> list[int]:
 
 def main():
     fresh_ingredients_1 = solve_part1(INPUTS_FILE_PATH)
-    print(f"Ihe total fresh_ingredients is: {len(fresh_ingredients_1)}")
+    print(f"The total fresh_ingredients is: {len(fresh_ingredients_1)}")
     fresh_ingredients_2 = solve_part2(INPUTS_FILE_PATH)
-    print(f"Ihe total fresh_ingredients with method2 is: {sum(fresh_ingredients_2)}")
+    print(f"The total fresh_ingredients with method2 is: {sum(fresh_ingredients_2)}")
 
 
 if __name__ == "__main__":

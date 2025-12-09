@@ -121,10 +121,10 @@ def solve_part2(file_path: Path) -> list[int]:
 
 def main():
     rolls = solve_part1(INPUTS_FILE_PATH)
-    print(f"Ihe total of rolls of paper that can be removed is: \n{len(rolls)}")
+    print(f"The total of rolls of paper that can be removed is: \n{len(rolls)}")
     rolls_2 = solve_part2(INPUTS_FILE_PATH)
     print(
-        f"Ihe total output rolls of paper that can be removed with method2 is: {len(rolls_2)}"
+        f"The total output rolls of paper that can be removed with method2 is: {len(rolls_2)}"
     )
 
 

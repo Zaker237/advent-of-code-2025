@@ -85,9 +85,9 @@ def solve_part2(file_path: Path, joltage_length: int = 1) -> list[int]:
 
 def main():
     joltages_1 = solve_part1(INPUTS_FILE_PATH)
-    print(f"Ihe total output joltage is: {sum(joltages_1)}")
+    print(f"The total output joltage is: {sum(joltages_1)}")
     joltages_2 = solve_part2(INPUTS_FILE_PATH, 12)
-    print(f"Ihe total output joltage with method2 is: {sum(joltages_2)}")
+    print(f"The total output joltage with method2 is: {sum(joltages_2)}")
 
 
 if __name__ == "__main__":
