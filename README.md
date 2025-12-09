@@ -6,8 +6,8 @@ The Code i'm writting durring the Advent of Code 2025
 - [x] [Day 1](./day2/GiftShop/)
 - [x] [Day 3](./day3/Lobby/)
 - [x] [Day 4](./day4/PrintingDepartment/)
-- [ ] [Day 5](./day5/Cafeteria/)
-- [ ] Day 6
+- [x] [Day 5](./day5/Cafeteria/)
+- [x] [Day 6](./day6/TrashCompactor/)
 - [ ] Day 7
 - [ ] Day 8
 - [ ] Day 9
